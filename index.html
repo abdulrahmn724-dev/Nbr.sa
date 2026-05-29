@@ -691,32 +691,46 @@ footer{background:var(--espresso);padding-top:72px}
 }
 
 /* ============================================================
-   PHOTOGRAPHIC SPLIT HERO  (real project photography)
+   FULL-SCREEN CINEMATIC HERO  (real project photography)
    ============================================================ */
 .hero{height:auto}
-.hero .hero-sticky{position:relative;height:auto;min-height:100svh;overflow:hidden;display:block}
-.hero-inner{max-width:none;margin:0;padding:0;grid-template-columns:1fr 1.12fr;gap:0;
-  align-items:stretch;min-height:100svh}
-.hero-copy{align-self:center;max-width:560px;margin-inline-start:6vw;padding:150px 4vw 100px 0;z-index:3}
-.hero-photo{position:relative;min-height:100svh;overflow:hidden;
-  background:linear-gradient(135deg,#8a5a36 0%,#6b4226 55%,#4e3019 100%)}
+.hero .hero-sticky{position:relative;height:auto;min-height:100svh;overflow:hidden;display:flex;align-items:center}
+/* full-bleed background photo + slow zoom */
+.hero-photo{position:absolute;inset:0;z-index:0;background:#2c1d11;overflow:hidden}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;
-  animation:heroImg 1.5s var(--ease) both}
-@keyframes heroImg{from{transform:scale(1.08);opacity:0}to{transform:scale(1);opacity:1}}
-.hero-photo::before{content:'';position:absolute;top:0;bottom:0;right:0;width:140px;z-index:2;pointer-events:none;
-  background:linear-gradient(270deg,var(--bg),transparent)}
-.hero-photo::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
-  box-shadow:inset 0 -120px 120px -70px rgba(31,26,21,.5)}
-.hero-vlabel{left:auto;right:30px}
+  transform:scale(1.04);animation:heroZoom 24s ease-in-out infinite alternate both}
+@keyframes heroZoom{from{transform:scale(1.04)}to{transform:scale(1.14)}}
+/* dark scrim for text readability — darkest on the text (right) side + base + bottom */
+.hero-photo::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(to left,rgba(22,17,12,.82),rgba(22,17,12,.4) 52%,rgba(22,17,12,.18)),
+  linear-gradient(to top,rgba(22,17,12,.6),transparent 34%),
+  linear-gradient(rgba(22,17,12,.22),rgba(22,17,12,.22))}
+/* copy overlaid, light on dark */
+.hero-inner{position:relative;z-index:2;max-width:var(--container);margin:0 auto;padding:0 6vw;
+  grid-template-columns:1fr;align-items:center}
+.hero-copy{max-width:680px}
+.hero .eyebrow{color:var(--gold-soft)}
+.hero h1{color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero h1 .ac{color:var(--gold-soft)}
+.hero p{color:rgba(255,255,255,.9);text-shadow:0 1px 16px rgba(0,0,0,.4)}
+.hero .btn-primary{background:#fff;color:var(--ink)}
+.hero .btn-ghost{border-color:rgba(255,255,255,.45);color:#fff;background:rgba(255,255,255,.08);backdrop-filter:blur(4px)}
+.hero .btn-ghost:hover{background:rgba(255,255,255,.16);border-color:#fff;color:#fff}
+.hero-vlabel{left:auto;right:30px;color:rgba(255,255,255,.62)}
+.hero-vlabel::before{background:linear-gradient(rgba(255,255,255,.7),transparent)}
+.hero .scroll-hint{color:rgba(255,255,255,.78)}
+.hero .scroll-hint .mouse{border-color:rgba(255,255,255,.7)}
+.hero .scroll-hint .mouse::after{background:rgba(255,255,255,.85)}
 @media(max-width:980px){
-  .hero .hero-sticky{padding:0;min-height:auto}
-  .hero-inner{grid-template-columns:1fr;min-height:auto}
-  .hero-photo{order:0;min-height:52vh;width:100%}
-  .hero-photo::before{display:none}
-  .hero-copy{order:1;margin-inline-start:0;padding:46px 6vw 64px;text-align:center;max-width:none}
+  .hero .hero-sticky{padding:0;min-height:100svh}
+  .hero-inner{padding:96px 7vw 80px;text-align:center}
+  .hero-copy{max-width:none;margin:0 auto}
   .hero-copy .eyebrow,.hero-copy p{margin-inline:auto}
   .hero-ctas{justify-content:center}
+  .hero-photo::after{background:
+    linear-gradient(to top,rgba(22,17,12,.85),rgba(22,17,12,.45) 55%,rgba(22,17,12,.55))}
 }
+@media(prefers-reduced-motion:reduce){.hero-photo img{animation:none;transform:scale(1.04)}}
 </style>
 </head>
 <body class="loading">
@@ -759,7 +773,9 @@ footer{background:var(--espresso);padding-top:72px}
 <!-- HERO : scroll assembly -->
 <section class="hero" id="home">
   <div class="hero-sticky">
-    <div class="hero-bg" data-parallax="0.15"></div>
+    <div class="hero-photo">
+      <img src="assets/hero-vanity.jpg" alt="وحدة مغاسل خشبية مزدوجة من صناعة نبر بأحواض زجاجية وصنابير نحاسية">
+    </div>
     <span class="hero-vlabel" aria-hidden="true">Bespoke Woodwork · Jeddah</span>
     <div class="hero-inner">
       <div class="hero-copy">
@@ -770,9 +786,6 @@ footer{background:var(--espresso);padding-top:72px}
           <a class="btn btn-primary magnetic" href="#work" data-link><span class="lbl">شاهد أعمالنا</span></a>
           <a class="btn btn-ghost magnetic" href="https://wa.me/966505509199"><span class="lbl">احجز استشارة مجانية</span></a>
         </div>
-      </div>
-      <div class="hero-photo">
-        <img src="assets/hero-vanity.jpg" alt="وحدة مغاسل خشبية مزدوجة من صناعة نبر بأحواض زجاجية وصنابير نحاسية" onerror="this.style.display='none';this.closest('.hero-photo').classList.add('noimg')">
       </div>
     </div>
     <div class="scroll-hint"><span class="mouse"></span><span>مرّر للأسفل</span></div>
