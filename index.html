@@ -934,11 +934,22 @@ footer{background:var(--espresso);padding-top:72px}
 <section class="section editorial" id="materials"><div class="container">
   <!-- tree line-illustrations -->
   <svg width="0" height="0" class="tree-defs" aria-hidden="true" focusable="false"><defs>
-    <symbol id="tree-fir" viewBox="0 0 80 96"><path d="M40 9 L31 29 L36 29 L28 46 L34 46 L25 62 L55 62 L46 46 L52 46 L44 29 L49 29 Z"/><path d="M37 62 L37 84 L43 84 L43 62"/><path d="M22 88 H58"/></symbol>
-    <symbol id="tree-cedar" viewBox="0 0 80 96"><path d="M40 7 L33 24 L37 24 L31 40 L36 40 L30 55 L35 55 L27 70 L53 70 L45 55 L50 55 L44 40 L49 40 L43 24 L47 24 Z"/><path d="M37 70 L37 86 L43 86 L43 70"/><path d="M24 90 H56"/></symbol>
-    <symbol id="tree-oak" viewBox="0 0 80 96"><path d="M40 88 L40 50"/><path d="M40 60 L30 51 M40 56 L51 47 M40 67 L29 61 M40 63 L52 58"/><path d="M40 86 L26 90 M40 86 L54 90"/><path d="M40 13 C25 13 17 25 20 37 C12 43 16 55 28 55 C33 61 47 61 52 55 C64 55 68 43 60 37 C63 25 55 13 40 13 Z"/></symbol>
-    <symbol id="tree-broad" viewBox="0 0 80 96"><path d="M40 90 L40 44"/><path d="M40 56 L31 49 M40 52 L49 45"/><path d="M40 11 C26 11 16 21 16 33 C16 45 27 53 40 53 C53 53 64 45 64 33 C64 21 54 11 40 11 Z"/><path d="M26 30 Q40 40 54 30 M27 40 Q40 49 53 40"/></symbol>
-    <symbol id="tree-elm" viewBox="0 0 80 96"><path d="M40 90 L40 38"/><path d="M40 50 L28 38 M40 46 L53 36 M40 58 L30 51 M40 54 L52 49"/><path d="M40 9 C27 11 21 21 25 31 C15 35 17 49 31 49 L49 49 C63 49 65 35 55 31 C59 21 53 11 40 9 Z"/></symbol>
+    <!-- Pine: tall conical conifer, drooping needled tiers + cones -->
+    <symbol id="tree-pine" viewBox="0 0 80 96"><path d="M40 6 L40 88"/><path d="M30 90 H50"/><path d="M40 12 Q33 16 27 24 M40 12 Q47 16 53 24"/><path d="M40 24 Q31 29 23 38 M40 24 Q49 29 57 38"/><path d="M40 38 Q29 44 20 54 M40 38 Q51 44 60 54"/><path d="M40 52 Q27 59 18 70 M40 52 Q53 59 62 70"/><path d="M40 66 Q26 73 16 84 M40 66 Q54 73 64 84"/><path stroke-width="0.8" d="M27 24 l-3 4 M33 22 l-2 4 M53 24 l3 4 M47 22 l2 4 M23 38 l-3 5 M57 38 l3 5 M20 54 l-3 5 M60 54 l3 5 M18 70 l-3 5 M62 70 l3 5"/><path stroke-width="0.8" d="M34 41 q-2 3 0 6 q2 -3 0 -6 Z M49 57 q-2 3 0 6 q2 -3 0 -6 Z"/></symbol>
+    <!-- Beech: dense, smooth, egg-shaped crown -->
+    <symbol id="tree-beech" viewBox="0 0 80 96"><path d="M40 90 L40 50"/><path d="M40 56 L33 49 M40 54 L47 48"/><path d="M40 8 C23 10 17 26 19 41 C20 52 29 58 40 58 C51 58 60 52 61 41 C63 26 57 10 40 8 Z"/><path stroke-width="0.8" d="M26 28 Q40 36 54 28 M24 38 Q40 46 56 38 M30 20 Q40 26 50 20"/></symbol>
+    <!-- Walnut: broad open rounded crown, spreading branches + nuts -->
+    <symbol id="tree-walnut" viewBox="0 0 80 96"><path d="M40 90 L40 48"/><path d="M40 56 L26 44 M40 54 L54 44 M40 62 L31 53 M40 60 L50 51 M40 50 L40 40"/><path d="M40 12 C22 12 13 25 18 37 C10 43 14 55 27 54 C32 60 48 60 53 54 C66 55 70 43 62 37 C67 25 58 12 40 12 Z"/><path stroke-width="0.8" d="M29 47 a2 2 0 1 0 .1 0 Z M51 49 a2 2 0 1 0 .1 0 Z M40 43 a2 2 0 1 0 .1 0 Z"/></symbol>
+    <!-- Oak: thick trunk, gnarled twisting branches, broad lumpy crown + acorns -->
+    <symbol id="tree-oak" viewBox="0 0 80 96"><path d="M37 90 L38 54 M43 90 L42 54 M34 90 H46"/><path d="M40 54 C35 49 33 43 28 41 C24 39 22 35 21 32"/><path d="M41 54 C47 49 49 44 54 42 C59 40 61 36 62 33"/><path d="M40 52 C40 46 42 41 45 38"/><path d="M40 53 C36 47 30 45 27 42"/><path d="M21 33 C12 31 11 21 19 19 C20 11 30 10 35 15 C39 9 51 9 55 16 C63 12 71 18 65 26 C71 31 65 40 57 37 C55 42 45 43 42 38 C39 43 29 43 26 38 C24 40 21 37 21 33 Z"/><path stroke-width="0.8" d="M30 40 v2.4 M29 42.4 h2 l-1 2.2 Z M50 41 v2.4 M49 43.4 h2 l-1 2.2 Z"/></symbol>
+    <!-- Teak: tall clear bole, high oval crown, large leaves -->
+    <symbol id="tree-teak" viewBox="0 0 80 96"><path d="M40 90 L40 40"/><path d="M40 44 L30 35 M40 42 L50 34 M40 48 L33 41 M40 46 L48 40"/><path d="M40 7 C27 8 21 17 24 27 C26 35 33 39 40 39 C47 39 54 35 56 27 C59 17 53 8 40 7 Z"/><path stroke-width="0.8" d="M31 20 Q35 16 37 22 Q33 24 31 20 Z M49 20 Q45 16 43 22 Q47 24 49 20 Z M40 13 Q44 16 42 22 Q38 18 40 13 Z M30 30 Q34 28 35 33"/></symbol>
+    <!-- Mahogany: wide low umbrella dome, buttressed trunk -->
+    <symbol id="tree-mahogany" viewBox="0 0 80 96"><path d="M40 90 L40 50"/><path d="M34 90 C36 80 38 72 40 68 M46 90 C44 80 42 72 40 68"/><path d="M40 54 L28 46 M40 52 L52 46 M40 58 L34 52 M40 56 L46 52"/><path d="M13 52 C7 39 17 25 31 24 C35 13 51 13 55 24 C69 25 75 39 67 52"/><path d="M13 52 Q40 59 67 52"/><path stroke-width="0.8" d="M22 46 Q40 38 58 46 M28 35 Q40 31 52 35 M40 24 L40 31"/></symbol>
+    <!-- Maple: neat rounded crown, fine branching + leaf veins -->
+    <symbol id="tree-maple" viewBox="0 0 80 96"><path d="M40 90 L40 50"/><path d="M40 56 L32 48 M40 54 L49 47 M40 60 L35 54 M40 58 L46 53 M40 50 L40 42"/><path d="M40 13 C26 13 17 24 19 36 C21 47 30 53 40 53 C50 53 59 47 61 36 C63 24 54 13 40 13 Z"/><path stroke-width="0.8" d="M29 38 Q40 34 51 38 M31 28 Q40 33 49 28 M40 22 L40 31"/></symbol>
+    <!-- Cedar (of Lebanon): wide, flat-topped, horizontally tiered plateaus -->
+    <symbol id="tree-cedar" viewBox="0 0 80 96"><path d="M40 90 L40 30"/><path d="M40 62 L30 58 M40 60 L50 57 M40 56 L24 52 M40 48 L56 44 M40 40 L26 37 M40 34 L54 31"/><path d="M16 60 Q40 66 64 60 M16 60 Q30 56 40 58 Q50 56 64 60"/><path d="M21 49 Q40 54 59 49 M21 49 Q31 46 40 47 Q49 46 59 49"/><path d="M26 39 Q40 43 54 39 M26 39 Q34 37 40 38 Q46 37 54 39"/><path d="M30 30 H50 M30 30 Q40 33 50 30"/></symbol>
   </defs></svg>
 
   <div class="ed-grid">
@@ -959,13 +970,13 @@ footer{background:var(--espresso);padding-top:72px}
       <span class="eyebrow" data-rv>الأخشاب · MATERIALS</span>
       <h2 class="ed-h" data-rv>أخشابنا المختارة.</h2>
       <div class="ed-mats">
-        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-fir"/></svg></span><span class="nm"><b>خشب الصنوبر</b><span>Pine</span></span><p>فاتح اللون، خفيف وسهل التشكيل — مثالي للأثاث الدافئ والديكورات الطبيعية.</p></div>
-        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-broad"/></svg></span><span class="nm"><b>خشب الزان</b><span>Beech</span></span><p>صلب ومتين بلون فاتح يتحمّل الاستخدام اليومي — مثالي للكراسي والطاولات.</p></div>
-        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-elm"/></svg></span><span class="nm"><b>خشب الجوز</b><span>Walnut</span></span><p>فاخر داكن بعروق غنية يضفي لمسة رقي — الخيار الأمثل للقطع المميزة.</p></div>
+        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-pine"/></svg></span><span class="nm"><b>خشب الصنوبر</b><span>Pine</span></span><p>فاتح اللون، خفيف وسهل التشكيل — مثالي للأثاث الدافئ والديكورات الطبيعية.</p></div>
+        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-beech"/></svg></span><span class="nm"><b>خشب الزان</b><span>Beech</span></span><p>صلب ومتين بلون فاتح يتحمّل الاستخدام اليومي — مثالي للكراسي والطاولات.</p></div>
+        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-walnut"/></svg></span><span class="nm"><b>خشب الجوز</b><span>Walnut</span></span><p>فاخر داكن بعروق غنية يضفي لمسة رقي — الخيار الأمثل للقطع المميزة.</p></div>
         <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-oak"/></svg></span><span class="nm"><b>خشب البلوط</b><span>Oak</span></span><p>قوي ومتين بعروق واضحة يدوم لعقود — مثالي للأرضيات والأثاث الثقيل.</p></div>
-        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-elm"/></svg></span><span class="nm"><b>خشب التيك</b><span>Teak</span></span><p>مقاوم للماء والرطوبة بطبيعته — الأنسب للحمامات والمساحات الرطبة والخارجية.</p></div>
-        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-elm"/></svg></span><span class="nm"><b>خشب الماهوجني</b><span>Mahogany</span></span><p>أحمر بنّي فاخر بلمعان دافئ — خيار راقٍ للطاولات والقطع المميزة.</p></div>
-        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-broad"/></svg></span><span class="nm"><b>خشب القيقب</b><span>Maple</span></span><p>فاتح ناعم بعروق دقيقة يمنح مظهراً عصرياً نظيفاً — للخزائن والديكور.</p></div>
+        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-teak"/></svg></span><span class="nm"><b>خشب التيك</b><span>Teak</span></span><p>مقاوم للماء والرطوبة بطبيعته — الأنسب للحمامات والمساحات الرطبة والخارجية.</p></div>
+        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-mahogany"/></svg></span><span class="nm"><b>خشب الماهوجني</b><span>Mahogany</span></span><p>أحمر بنّي فاخر بلمعان دافئ — خيار راقٍ للطاولات والقطع المميزة.</p></div>
+        <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-maple"/></svg></span><span class="nm"><b>خشب القيقب</b><span>Maple</span></span><p>فاتح ناعم بعروق دقيقة يمنح مظهراً عصرياً نظيفاً — للخزائن والديكور.</p></div>
         <div class="ed-mat" data-rv><span class="tree"><svg viewBox="0 0 80 96"><use href="#tree-cedar"/></svg></span><span class="nm"><b>خشب الأرز</b><span>Cedar</span></span><p>عطري ومقاوم للحشرات بطبيعته — مثالي للخزائن والتكسيات والأعمال الخارجية.</p></div>
       </div>
     </div>
